@@ -22,6 +22,10 @@ const RandomValue = ()  => <div>{Math.floor(Math.random() * 100)} </div>
 //  React.createElement(Button, { title: "Search" })
 //);
 
+const MaybeError = ({errorMessage}) => <div>
+    {errorMessage && <ErrorDisplay message={errorMessage}/>}
+  </div>; 
+
 const ErrorDisplay = ({message}) => <div
  style={{color:"red", background:"yellow"}}
 >{message}</div>
@@ -47,8 +51,8 @@ class App extends Component {
         </p>
         <InputForm/>
         <RandomValue/>
-        <ErrorDisplay message="error message"/>
-        
+        {/*<ErrorDisplay message="error message"/>*/}
+        <MaybeError errorMessage={Math.random() > 0.5 ? "Random error" : ""}/>
       </div>
     );
   }
