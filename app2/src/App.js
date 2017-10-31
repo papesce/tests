@@ -20,6 +20,20 @@ class Button extends React.Component {
   }
 }
 
+class Form extends React.Component {
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Form Submited");
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}> 
+        <button type="submit">Submit</button>
+        </form>
+    );
+  }
+}
+
 //function Button (props) {
   // let {title} = props;
   // return (<div>
@@ -42,6 +56,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Button title="Button title "/>
+        <Form />
         </div>
     );
   }
