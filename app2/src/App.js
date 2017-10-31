@@ -7,15 +7,16 @@ import './App.css';
 class Button extends React.Component {
   constructor(props){
     super(props);
-    this.counter = 0;
+    this.state = {counter : 0};
   }
   handleClick = () => {
-    this.counter++;
-    console.log(`Clicked ${this.counter}`)
+    this.setState((prevState) => {return {counter: prevState.counter + 1}});
+    console.log(`Clicked ${this.state.counter}`)
   } 
   render() {
     return (<div>
-      <button onClick={this.handleClick}>{this.props.title + this.counter}</button>
+      <button onClick={this.handleClick}>{this.props.title + 
+        this.state.counter}</button>
       </div>)
   }
 }
