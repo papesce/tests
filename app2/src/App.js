@@ -2,31 +2,24 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//type Expense {
-//  description: string
-//  category: string
-//}
-
-const NoProps = () => {
-  let x = 1;
-  return (
-  <div className='logo'> {x} No props </div>
-)};
-
-
-const WithProps = (props) => (
-  <div className='logo'> {props.expense.name}
-  </div>
+const InputForm = React.createElement(
+  "form",
+  { target: "_blank", action: "https://google.com/search" },
+  React.createElement("div", null, "Enter input and click Search"),
+  React.createElement("input", { name: "q", className: "input" }),
+  React.createElement(Button, { title: "Search" })
 );
 
-
-const WithSpecificProps = (props) => (
-  <div className='logo'> {props.name}
-  </div>
-);
+function Button (props) {
+  return (<div>
+   <input type="text" name="text"/>  
+  <button type="submit">{props.title}</button>
+  </div>)
+}
 
 class App extends Component {
   render() {
+    return InputForm;
     return (
       <div className="App">
         <header className="App-header">
@@ -36,9 +29,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <NoProps/>
-        <WithProps expense={{"name":"exp1", "notused":"notused"}}/>
-        <WithSpecificProps name={"exp2"}/>
+        <Button title={"Title"}/>
+        
         
       </div>
     );
