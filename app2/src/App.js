@@ -37,6 +37,9 @@ function Button (props) {
   </div>)
 }
 
+const Doubler = ({value = [1,2,3]}) => 
+  <div>{value.map(e => e * 2 + ",")}</div>;
+
 class App extends Component {
   render() {
     //return InputForm;
@@ -53,6 +56,7 @@ class App extends Component {
         <RandomValue/>
         {/*<ErrorDisplay message="error message"/>*/}
         <MaybeError errorMessage={Math.random() > 0.5 ? "Random error" : ""}/>
+        <Doubler value={[2]}/>
       </div>
     );
   }
