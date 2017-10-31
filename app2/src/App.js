@@ -22,6 +22,10 @@ const RandomValue = ()  => <div>{Math.floor(Math.random() * 100)} </div>
 //  React.createElement(Button, { title: "Search" })
 //);
 
+const ErrorDisplay = ({message}) => <div
+ style={{color:"red", background:"yellow"}}
+>{message}</div>
+
 function Button (props) {
   let {title} = props;
   return (<div>
@@ -43,6 +47,7 @@ class App extends Component {
         </p>
         <InputForm/>
         <RandomValue/>
+        <ErrorDisplay message="error message"/>
         
       </div>
     );
