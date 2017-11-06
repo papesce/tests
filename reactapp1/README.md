@@ -1,5 +1,8 @@
 ## This project is synchronized with:
 https://github.com/papesce/tests.gitbranch
+## Goal: reproduce samples of learnign react book
+https://github.com/MoonHighway/learning-react
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
