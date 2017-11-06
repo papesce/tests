@@ -1,8 +1,9 @@
 import storeFactory from "../index"
 import {addColor} from "../../actions"
+import setupGlobals from "../../../tests/global"
 
-describe("addColor", () => {
-    window.localStorage = {}
+xdescribe("addColor", () => {
+    setupGlobals();
     let store
     const colors = [
         {
