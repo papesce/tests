@@ -14,7 +14,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
  npm install redux --save
  npm install react-redux --save 
-
+ npm install react-icons --save
+ 
  npm install jest --save-dev  
  npm install  babel-jest --save-dev (optional)
  npm install deep-freeze --save-dev
