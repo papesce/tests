@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # dependencies
 npm install react-router-dom --save
-
+npm install react-icons --save
  
  npm install redux --save
  npm install react-redux --save 

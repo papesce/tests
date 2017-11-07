@@ -1,0 +1,27 @@
+div.page {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+section.events, section.about, section.products, section.contact {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+section.home nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: space-around;
+    width: calc(100% - 2em);
+    flex-wrap: wrap;
+}
+section.home nav a {
+    font-size: 2em;
+    flex-basis: 60px;
+}
+    
