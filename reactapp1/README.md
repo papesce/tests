@@ -23,3 +23,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 npm install enzyme --save-dev
 npm install  enzyme-adapter-react-16 --save-dev
 npm install react-addons-test-utils --save-dev 
+npm install enzyme-to-json --save-dev
