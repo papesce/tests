@@ -11,6 +11,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  ./node_modules/.bin/eslint src/sample.js
 
 # dependencies
+npm install react-router-dom --save
+
  
  npm install redux --save
  npm install react-redux --save 
