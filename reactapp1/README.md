@@ -10,7 +10,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 #command to run eslint
  ./node_modules/.bin/eslint src/sample.js
 
-# dependencies
+
+
+# new dependencies
+npm install express --save
+npm install react react-dom --save
+
+npm install babel-cli --save
+
+
+# old dependencies
 npm install react-router-dom --save
 npm install react-icons --save
  
