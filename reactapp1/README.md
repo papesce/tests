@@ -15,6 +15,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # new dependencies
 npm install express --save
 npm install react react-dom --save
+npm install webpack --save-dev
+npm install babel-loader --save-dev
 
 npm install babel-cli --save-dev
 npm install babel-preset-es2017 --save-dev
