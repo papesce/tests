@@ -83,7 +83,7 @@ const addStoreToRequestPipeline = (req, res, next) => {
 }
 
 export default express()
-    .use(bodyParser.json())
+    //.use(bodyParser.json())
     .use(logger)
     .use(fileAssets)
     .use(addStoreToRequestPipeline)
