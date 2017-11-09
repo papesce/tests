@@ -1,12 +1,12 @@
 import express from 'express'
 import path from 'path'
-//import bodyParser from 'body-parser'
+import bodyParser from 'body-parser'
 import fs from 'fs'
 import { Provider } from 'react-redux'
 import { compose } from 'redux'
 import { StaticRouter } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'
-//import api from './color-api'
+import api from './color-api'
 import App from '../components/App'
 import storeFactory from '../store'
 import initialState from '../../data/initialState.json'
@@ -83,9 +83,9 @@ const addStoreToRequestPipeline = (req, res, next) => {
 }
 
 export default express()
-    //.use(bodyParser.json())
+    .use(bodyParser.json())
     .use(logger)
     .use(fileAssets)
     .use(addStoreToRequestPipeline)
-    //.use('/api', api)
+    .use('/api', api)
     .use(respond)

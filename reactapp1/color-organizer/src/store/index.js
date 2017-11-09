@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { colors } from './reducers'
 import stateData from '../../data/initialState'
-//import thunk from 'redux-thunk'
+import thunk from 'redux-thunk'
 
 const clientLogger = store => next => action => {
     if (action.type) {
@@ -27,13 +27,13 @@ const serverLogger = store => next => action => {
 
 
 
-const middleware = server => 
-    (server) ? serverLogger : clientLogger
+const middleware = server => [
+    (server) ? serverLogger : clientLogger, thunk]
 
 
 
 const storeFactory = (server = false, initialState = {}) =>
-applyMiddleware(middleware(server))(createStore)(
+applyMiddleware(...middleware(server))(createStore)(
     combineReducers({colors}),
     initialState
 )

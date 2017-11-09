@@ -12,3 +12,9 @@ npm install react react-dom --save
 
 
 npm install react-router-dom --save
+
+npm install extract-text-webpack-plugin --save-dev
+
+npm install body-parser --save-dev
+
+npm install isomorphic-fetch --save
