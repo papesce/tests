@@ -45,15 +45,19 @@ function visibilityFilter(prevState = VisibilityFilters.SHOW_ALL, action) {
     }
 }
 
-function todoAPP (prevState = initialState, action) {
-    switch (action.type) {
-    case SET_VISIBILITY_FILTER:
-        return {...prevState, visibilityFilter: 
-            visibilityFilter(prevState.filter,action) };
-    case ADD_TODO:
-    case TOGGLE_TODO:
-        return {...prevState, todos: todos(prevState.todos, action)}
-    default: return prevState;     
-    }
-}
+//function todoAPP (prevState = initialState, action) {  
+// return 
+//return {
+//    visibilityFilter: visibilityFilter(prevState.visibilityFilter,action),
+//    todos: todos(prevState.todos, action)
+//}
+//}
 
+const todoApp = combineReducers({visibilityFilter, todos});
+//const todoApp = combineReducers(
+//    {visibilityFilter: vfReducer,
+//     todos: todoReducer}
+//);
+
+
+export default todoApp;
