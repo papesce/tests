@@ -1,29 +1,26 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
+//import Todo from './components/Todo'
+import Footer from './components/Footer'
+import VisibleTodoList from './containers/VisibleTodoList'
+import AddTodo from './containers/AddTodo'
+import {Provider} from 'react-redux'
 
 import store from './redux/store'
-import {addTodo, toggleTodo, setVisibilityFilter} from './redux/actions'
-import { VisibilityFilters } from './redux/actionTypes';
-
-const unsuscribe = store.subscribe(() => {
-    console.log(store.getState());
-})
-unsuscribe();
+//import { VisibilityFilters } from './redux/actionTypes';
 
 class App extends Component {
-    componentWillMount(){
-        
-        store.dispatch(addTodo('todo1'));
-        store.dispatch(addTodo('todo2'));
-        store.dispatch(toggleTodo(1));
-        store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ACTIVE))
-    }  
-    render() {
-      
+    render() { 
         return (
             <div className="App">
-                {JSON.stringify(store.getState())}
+                <Provider store={store}>
+                    <div>
+                        <AddTodo />
+                        <VisibleTodoList />
+                        <Footer />
+                    </div>
+                </Provider>
             </div>
         );
     }
