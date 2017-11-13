@@ -5,8 +5,8 @@ import {Provider} from 'react-redux'
 import {store, history} from './redux/store'
 import {ConnectedRouter} from 'react-router-redux'
 import {Route} from 'react-router'
-import Home from './components/Home'
-import Login from './components/Login'
+import HomePage from './components/HomePage'
+import LoginPage from './components/LoginPage'
 
 class App extends Component {
   render() {
@@ -18,12 +18,12 @@ class App extends Component {
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <ConnectedRouter history={history}>
-             <div>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/login" component={Login} />
-               </div>
+            <div>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/login" component={LoginPage} />
+            </div>
           </ConnectedRouter>
-      </div>
+        </div>
       </Provider>
     );
   }

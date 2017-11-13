@@ -9,10 +9,12 @@ npm install --save react-redux
 npm install --save react-router-redux@next
 npm install --save history
 npm install --save redux-logger
-npm --save install material-ui
+npm install --save material-ui
 
 
 
 
 #Links
-https://medium.com/technoetics/create-basic-login-forms-using-create-react-app-module-in-reactjs-511b9790dede
+- [Login Form](https://medium.com/technoetics/create-basic-login-forms-using-create-react-app-module-in-reactjs-511b9790dede)
+- [Auth with redux](https://medium.com/@MattiaManzati/tips-to-handle-authentication-in-redux-4d596e11bb21)
+- [Login Flow](https://github.com/mxstbr/login-flow)

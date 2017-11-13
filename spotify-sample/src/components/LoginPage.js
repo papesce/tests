@@ -2,12 +2,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import React from 'react'
-
+import React, { Component } from 'react'
+import {login} from './LoginUtils'
 
 //const Login = () => (<h2> Login </h2>)
 
-class Login extends React.Component {
+class LoginPage extends Component {
   constructor(props) {
     super(props)
     this.state = {username: 'pablo', password: ''}
@@ -22,10 +22,9 @@ class Login extends React.Component {
     this.setState({password: newValue})
   }
   handleClick(event) {
-
-  }
-  submitForm() {
-
+    login(function(accessToken) {
+      console.log(accessToken);
+    })
   }
   render() {
     const email = this.state.username;
@@ -57,4 +56,4 @@ class Login extends React.Component {
 
 
 
-export default Login
+export default LoginPage
