@@ -30,7 +30,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    albums: [state.albums],
+    albums: state.albums,
     token: state.token};
 }
   

@@ -6,7 +6,7 @@ const spotifyApi = new Spotify();
 export const searchMiddleware = store => next => action => {
   if (action.type === SEARCH_TERM) {
     
-    debugger;
+    //debugger;
     spotifyApi.setAccessToken(store.getState().token);
     spotifyApi.search('Jewel', ['album'], ).then( (result) => {
       //console.log(result);
@@ -15,6 +15,7 @@ export const searchMiddleware = store => next => action => {
           title: album.name
         };
       })
+      //debugger;
       next(action)
     })
     //setTimeout(() => ,5000);  
