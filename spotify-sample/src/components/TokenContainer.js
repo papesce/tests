@@ -13,7 +13,7 @@ class TokenContainer extends Component {
   render() {
     return (
       <div>
-        <p> {this.props.token} </p>
+        {/*<p> {this.props.token} </p>*/}
         <HomePage albums={this.props.albums} 
           isAuth={true}/>
       </div>

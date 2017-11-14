@@ -8,6 +8,7 @@ import {Route} from 'react-router'
 import HomePage from './components/HomePage'
 import LoginPage from './components/LoginPage'
 import TokenContainer from './components/TokenContainer'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 class App extends Component {
   render() {
@@ -19,11 +20,11 @@ class App extends Component {
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <ConnectedRouter history={history}>
-            <div>
+            <MuiThemeProvider>
               <Route exact path="/" component={HomePage} />
               <Route path="/login" component={LoginPage} />
               <Route path="/token/:accessToken" component={TokenContainer} />
-            </div>
+            </MuiThemeProvider>
           </ConnectedRouter>
         </div>
       </Provider>

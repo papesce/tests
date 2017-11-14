@@ -1,13 +1,14 @@
 import React from 'react';
 import Album from './Album';
+import {List} from 'material-ui/List';
 
 const AlbumList = ({albums}) => (
   <div>
-    <ul>
+    <List>
       {albums.map((album,index) => 
         <Album key={index} album={album}/>
       )}
-    </ul> 
+    </List> 
   </div>   
 ) 
 

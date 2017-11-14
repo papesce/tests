@@ -8,7 +8,7 @@ export const searchMiddleware = store => next => action => {
     
     //debugger;
     spotifyApi.setAccessToken(store.getState().token);
-    spotifyApi.search('Jewel', ['album'], ).then( (result) => {
+    spotifyApi.search(action.text, ['album'], ).then( (result) => {
       //console.log(result);
       action.albums = result.albums.items.map( (album) => {
         return {

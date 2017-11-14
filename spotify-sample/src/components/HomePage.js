@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { Redirect } from 'react-router-dom';
 import AlbumList from './AlbumList'
+import AppBar from 'material-ui/AppBar'
+
 
 class HomePage extends Component {
 
@@ -8,7 +10,8 @@ class HomePage extends Component {
     const {isAuth, albums} = this.props;
     if (!isAuth)  return <Redirect to="/login" />;  
     return (<div>
-      <h1>home </h1>     
+        <AppBar title='Spotify Sample'> </AppBar>
+       
       <AlbumList albums= {albums}/>
     </div>
     )
