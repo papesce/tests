@@ -7,6 +7,7 @@ import {ConnectedRouter} from 'react-router-redux'
 import {Route} from 'react-router'
 import HomePage from './components/HomePage'
 import LoginPage from './components/LoginPage'
+import TokenContainer from './components/TokenContainer'
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <div>
               <Route exact path="/" component={HomePage} />
               <Route path="/login" component={LoginPage} />
+              <Route path="/token/:accessToken" component={TokenContainer} />
             </div>
           </ConnectedRouter>
         </div>

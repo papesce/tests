@@ -10,7 +10,13 @@ npm install --save react-router-redux@next
 npm install --save history
 npm install --save redux-logger
 npm install --save material-ui
+npm install --save react-router-dom
 
+//server:
+npm install --save spotify-web-api-node
+
+//client:
+npm install --save spotify-web-api-js
 
 
 
