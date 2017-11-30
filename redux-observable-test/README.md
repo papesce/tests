@@ -2,6 +2,8 @@
 
 https://github.com/Microsoft/TypeScript-React-Starter
 
+https://redux-observable.js.org/docs/basics/Epics.html
+
 create-react-app redux-observable-test --scripts-version=react-scripts-ts
 
 npm install -S redux react-redux @types/react-redux

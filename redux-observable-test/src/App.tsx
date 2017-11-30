@@ -3,17 +3,17 @@ import './App.css';
 import './myscript.ts';
 import CounterContainer from './containers/CounterContainer';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { StoreState } from './types/index';
 import rootReducer from './reducers/index';
-
+import { createEpicMiddleware } from 'redux-observable';
+import { rootEpic } from './epics';
 const logo = require('./logo.svg');
 
-const store = createStore<StoreState>(rootReducer, {
-  counter : 0
-//  enthusiasmLevel: 1,
-//  languageName: 'TypeScript',
-});
+const epicMiddleware = createEpicMiddleware(rootEpic);
+
+const store = createStore<StoreState>(rootReducer, { counter: 0}, 
+                                      applyMiddleware(epicMiddleware) );
 
 class App extends React.Component {
   render() {

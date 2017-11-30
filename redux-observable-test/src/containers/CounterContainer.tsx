@@ -10,10 +10,10 @@ export function mapStateToProps({ counter }: StoreState): CounterProps {
   };
 }
 
-export function mapDispatchToProps(dispatch: Dispatch<actions.EnthusiasmAction>): CounterProps {
+export function mapDispatchToProps(dispatch: Dispatch<actions.Action>): CounterProps {
   return {
-    onIncrement: () => dispatch(actions.incrementEnthusiasm()),
-//    onDecrement: () => dispatch(actions.decrementEnthusiasm()),
+    onIncrement: () => dispatch(actions.incrementStarted()),
+    onCancel: () => dispatch(actions.incrementCanceled())
   };
 }
 
