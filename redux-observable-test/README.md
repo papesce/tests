@@ -1,5 +1,10 @@
 # redux-observable-test
+
+https://github.com/Microsoft/TypeScript-React-Starter
+
 create-react-app redux-observable-test --scripts-version=react-scripts-ts
+
+npm install -S redux react-redux @types/react-redux
 
 npm install --save redux
 npm install --save rxjs
